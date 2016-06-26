@@ -6,7 +6,7 @@ The intended workflow is:
 
 1. Update `config.yml` with new milestones and labels
 1. Commit and push to a git repo (preferably via pull request)
-1. CI sync labels and milestones across target Github repos
+1. CI syncs labels and milestones across target Github repos
 
 For more info on github-sync-labels-milestones see <https://github.com/Jimdo/github-sync-labels-milestones>
 
@@ -39,6 +39,13 @@ In `do-release.sh` uncomment the lines that configure the git user settings and 
 
 #### Running locally
 
+First install dependencies
+
+```bash
+npm install
+bundle install
+```
+
 To ensure your yaml is valid, first run
 
 ```bash
@@ -58,11 +65,12 @@ This command will read `config.yml` and sync the labels and milestones to the ta
 Syncing and versioning your configs are easiest when done via CI.  Setting this up is quick and painless:
 
 1. Create a git repo for your config and populate it with this starter project
-1. Ensure that the `GITHUB_TOKEN` env var is set to your Github personal access token in CI
+1. Set the `GITHUB_TOKEN` env var in CI to your Github personal access token
 1. (optional) Ensure that CI has write access to your git repo
+1. Configure CI to install dependencies (`npm install` and `bundle install`)
 1. Configure the CI test command to be `npm run lint`
 1. Configure the CI deployment command to be `npm run sync`
 1. (optional) After `npm run sync` run `npm run release`
-    - This will create and push a git tag, allowing you to later revert changes
+    - This will create and push a git tag on every sync
 
 `circle.yml` will make sync and release work out of the box using CircleCI (<https://circleci.com/>).  PRs welcome for configs for other CI services.
