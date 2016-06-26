@@ -16,8 +16,6 @@
         state: open
         description: Single line description
         due_on: 2034-02-18
-        previousTitles:
-            - Example open milestone
 
     labels:
     -   name: bug
