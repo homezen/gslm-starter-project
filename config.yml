@@ -1,0 +1,70 @@
+-   repositories:
+        - <org>/<project>
+        - <org>/<project>
+
+    milestones:
+    -   title: Example closed milestone
+        state: closed
+        description: |
+            Multiline
+            Description
+        due_on: 2024-02-18
+        previousTitles:
+            - Example open milestone
+
+    -   title: Another example open milestone
+        state: open
+        description: Single line description
+        due_on: 2034-02-18
+        previousTitles:
+            - Example open milestone
+
+    labels:
+    -   name: bug
+        color: FF6B6B
+
+    -   name: ci/cd
+        color: 69D2E7
+
+    -   name: cleanup
+        color: A7DBD8
+
+    -   name: design/ui
+        color: 4ECDC4
+
+    -   name: dev tools
+        color: C3FF68
+        previousNames:
+            - devtools
+
+    -   name: duplicate
+        color: FFB7CA
+
+    -   name: enhancement
+        color: C0ADDB
+
+    -   name: feature
+        color: '556270'
+
+    -   name: invalid
+        color: FFDABF
+
+    -   name: performance
+        color: C7F464
+
+    -   name: proposal
+        color: '7786E1'
+
+    -   name: security
+        color: FA6900
+
+    -   name: tech debt
+        color: C44D58
+
+    -   name: testing
+        color: 87D69B
+
+    -   name: wont fix
+        color: F4FCE8
+        previousNames:
+            - wontfix

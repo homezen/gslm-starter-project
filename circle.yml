@@ -1,0 +1,18 @@
+machine:
+    node:
+        version: '4.4.6'
+    ruby:
+        version: '2.2'
+
+test:
+    pre:
+        - node -v
+        - npm -v
+        - npm run lint
+
+deployment:
+    master:
+        branch: master
+        commands:
+            - npm run sync
+            - npm run release

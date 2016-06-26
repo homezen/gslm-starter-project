@@ -1,0 +1,29 @@
+{
+  "name": "gslm-starter-project",
+  "version": "1.0.0",
+  "description": "Starter project for using github-sync-labels-milestones",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && npm run build-json",
+    "build-json": "ruby -ryaml -rjson -e 'puts JSON.pretty_generate(YAML.load(ARGF))' < config.yml > config.json",
+    "clean": "rm -f config.json",
+    "gslm": "github-sync-labels-milestones -v -c config.json -t $GITHUB_TOKEN",
+    "lint": "bundle exec yaml-lint *.yml",
+    "release": "./do-release.sh",
+    "sync": "npm run build && [ -f config.json ] && npm run gslm",
+    "test": "echo \"no tests\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/home-buddy/labels-and-milestones.git"
+  },
+  "author": "spaintrain <mcspainhower+npm@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/home-buddy/labels-and-milestones/issues"
+  },
+  "homepage": "https://github.com/home-buddy/labels-and-milestones#readme",
+  "devDependencies": {
+    "github-sync-labels-milestones": "0.0.3"
+  }
+}
