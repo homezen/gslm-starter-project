@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/home-buddy/labels-and-milestones#readme",
   "devDependencies": {
-    "github-sync-labels-milestones": "0.0.3"
+    "github-sync-labels-milestones": "0.3.0"
   }
 }
