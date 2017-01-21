@@ -1,5 +1,7 @@
 # Starter Project for github-sync-labels-milestones
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/homezen/gslm-starter-project.svg)](https://greenkeeper.io/)
+
 This is a project to quickly get started using [Jimdo/github-sync-labels-milestones](https://github.com/Jimdo/github-sync-labels-milestones) for syncing milestones and labels across Github repos, especially using CI.
 
 The intended workflow is:
